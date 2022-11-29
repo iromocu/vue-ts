@@ -21,7 +21,9 @@ const routeLink: RouteLink[] = characterRoute.children!
     <h1>Personajes</h1>
     <!-- Navbar -->
     <NavBar :show-icon="false" :links="routeLink"/>
-    <RouterView />   
+    <Suspense>
+      <RouterView />   
+    </Suspense>
   </div>
 </template>
 
